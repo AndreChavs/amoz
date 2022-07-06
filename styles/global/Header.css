@@ -1,0 +1,39 @@
+.header{
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    transition: .5s ease-in;    
+    z-index: 10;
+}
+/* logo */
+.logo{
+    margin-top: 40px;
+}
+
+/* navList */
+.navlist li{
+    cursor: pointer;    
+    padding: 15px 25px 15px 25px;    
+    border-bottom: 1px solid #616161;
+}
+.navlist li:last-child {
+    padding-right: 0;
+} 
+.navlist li:first-child{
+    padding-left: 0;
+}
+.navlist li a{
+    font-size: 20px;
+    font-weight: 300;
+    padding-right: 100%;
+    padding-bottom: 18px;    
+}
+.navlist li:hover, .navlist li a:hover{
+    color: #c6a77f;
+    border-color: #c6a77f;
+}
+@media (max-width: 999px ){
+    .navlist li{
+        padding-left: 0;
+    }
+}

@@ -1,0 +1,22 @@
+.mobileMenu{
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    display: none;
+    background: #6161612f;
+}
+.mobileMenu i{
+    font-size: 2.2em;    
+}
+@media (max-width: 999px){
+    /* body{
+        overflow-x: hidden;
+    } */
+    .mobileMenu{
+        margin-top: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        align-self: flex-end;
+    }
+}
