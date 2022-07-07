@@ -11,7 +11,7 @@ const Navlist = ({children, className, mobile}) => {
         }
     },[mobile])
 
-    const navlistStyles = [classModule, className] 
+    const navlistStyles = [classModule, className, 'navlist'] 
     
     return <ul className={navlistStyles.join(' ')} >
         {children}

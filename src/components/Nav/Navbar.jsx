@@ -19,18 +19,29 @@ const Navbar = ({className, style}) => {
   const navbarStyles = [styles.navbar, className]
   
   React.useEffect( () => {
-
+    function handleScroll() {
+      setMobile(false)
+    }
+    window.addEventListener('scroll', handleScroll)
   },[])
+
+  function handleClick() {
+    //Sempre que o link do menu for clicado, a janela mobile ficará escondida
+    setMobile(!mobile)
+  }
 
   return <nav className={navbarStyles.join(' ')} style={style}>    
     <Logo className='logo'/>
     <MobileMenu className='mobile-menu'
     mobile={mobile} setMobile={setMobile} />
-    <Navlist mobile={mobile} className='navlist' refer={navlistRef}>
+    <Navlist mobile={mobile} refer={navlistRef}>
+      <Logo className='navlist-logo'/>
       {linksMenu.map( item => {
-          return <li key={item.nome}>
-            <Link href={item.href}><a>{item.nome}</a></Link>
-          </li>
+          return <>
+            <li key={item.nome}>
+              <Link href={item.href}><a onClick={handleClick}>{item.nome}</a></Link>
+            </li>
+          </>
         })}
     </Navlist>    
   </nav>
