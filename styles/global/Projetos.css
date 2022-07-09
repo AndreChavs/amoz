@@ -1,0 +1,23 @@
+.projetos-hero{
+    margin-top: 235px;
+}
+.projetos-hero .projetos-header{
+    border-top: 1px solid #616161;
+}
+.projetos-header h1{
+    padding: 50px 80px;
+    max-width: 80%;
+    border-right: 1px solid #616161;
+    color: #CBAF7A;
+    font-size: 37px;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+.projetos-header p{
+    margin-top: 80px;
+    max-width: 480px;
+    color: #616161;
+    font-size: 25px;
+    font-weight: 300;
+    line-height: 1.3;
+}

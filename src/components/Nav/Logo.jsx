@@ -1,13 +1,12 @@
 import Image from 'next/image'
-import logo from '../../../public/logo.png'
-
-const Logo = ({className}) => {
+const Logo = ({className, imgsrc, alt, sizes}) => {
     
     return (
-        <div className={className}>
-            <Image src={logo.src} 
-            width={logo.width} height={logo.height}
-            alt='Amoz - arquitetura e interiores'
+        <div className={className}>            
+            <Image src={imgsrc}
+                sizes={sizes}
+                alt={alt}
+                srcset
             />
         </div>
     )

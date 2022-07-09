@@ -1,14 +1,16 @@
 .header{
     width: 100vw;
     position: absolute;
+    padding-top: 1em;
     top: 0;
     transition: .5s ease-in;    
     z-index: 10;
 }
 
+
 /* logo */
 .logo{
-    margin-top: 40px;
+    margin-top: 30px;
 }
 
 /* navList */
@@ -16,24 +18,23 @@
     margin: 2em;
     display: none;
 }
-.navlist li{
-    cursor: pointer;
-    padding: 1em 2em;   
-    border-bottom: 1px solid #616161;
-}
-.navlist li:last-child {
-    padding-right: 0;
-} 
 
 .navlist li a{
+    display: block;
     font-size: 20px;
     font-weight: 300;
+    padding: 0em 2em 1em 2em;
+    border-bottom: 1px solid #616161;    
 }
-.navlist li:hover{
-    border-color: #c6a77f;
+.navlist li:nth-child(1) a{
+    padding-left: 0px;
+}
+.navlist li:nth-child(5) a{
+    padding-right: 0px;
 }
 .navlist li a:hover{
-    color: #c6a77f; 
+    color: #c6a77f;
+    border-color: #c6a77f; 
 }
 
 
@@ -41,19 +42,30 @@
 
 
 @media (max-width: 999px ){
+    nav.navbar{
+        justify-content: center;
+        align-items: center;
+    }
     .navlist-logo{        
         display: block;
     }
     .navlist li{        
-        border: none;        
+        border: none;                
     }
     .navlist li a{
         display: block;
+        text-align: center;
+        padding-top: 1em;        
     }
-    .navlist li:hover{
-        background: #c6a77f;
+    .navlist li:nth-child(1) a{
+        padding-left: 2em;
+    }
+    .navlist li:nth-child(5) a{
+        padding-right: 2em;
+        border-bottom: none;
     }
     .navlist li a:hover{
-        color: #616161; 
+        background: #c6a77f;
+        color: #fff; 
     } 
 }
