@@ -1,9 +1,9 @@
-import ContainerFlex from '../../layout/container/ContainerFlex'
+import Container from '../../layout/container/Container'
 const Hero = ({children,className}) => {
     return <section className={className}>
-        <ContainerFlex>
+        <Container>
             {children}
-        </ContainerFlex>
+        </Container>
     </section>
 }
 

@@ -1,14 +1,30 @@
 import Head from "next/head"
-import ContainerFlex from '../src/layout/container/ContainerFlex'
+import Image from "next/image"
+import Link from "next/link"
+import Container from '../src/layout/container/Container'
 import Grid06 from '../src/layout/container/Grid06'
+import Grid08 from '../src/layout/container/Grid08'
+import Grid04 from '../src/layout/container/Grid04'
+
+import img1 from '../public/projetos/projeto1.jpg'
+import img2 from '../public/projetos/projeto2.jpg'
+import img3 from '../public/projetos/projeto3.jpg'
+import img4 from '../public/projetos/projeto4.jpg'
+
 
 export default function Projetos() {
+
+    const projetosApi = [
+        {src:img1, alt:'descrição da imagem'}, {src:img2, alt:'descrição da imagem'},
+        {src:img3, alt:'descrição da imagem'}, {src:img4, alt:'descrição da imagem'}
+    ]
+
     return <>
         <Head>      
             <title>Amoz - Projetos arquitetônicos e Interiores</title>
         </Head>
         <section className='projetos-hero'>
-            <ContainerFlex className='projetos-header wrap'>
+            <Container className='projetos-header wrap'>
                 <Grid06 style={{marginTop:'0px'}}>
                     <h1>projetos</h1>
                 </Grid06>
@@ -20,7 +36,34 @@ export default function Projetos() {
                         ultrices gravida.
                     </p>
                 </Grid06>
-            </ContainerFlex>
+            </Container>            
+        </section>
+        <section className='projetos-grid'>
+            <Container className='wrap'>        
+                {projetosApi.map( (projeto, index) => {
+                    if(index % 2 == 0){                                       
+                        return <Grid08 key={index}>                            
+                            <picture>
+                                <source media="(max-width: 999px)" srcSet={projeto.src.src}/>
+                                <Image src={projeto.src} style={{height:'100%'}}
+                                    width={projeto.src.widht} height={projeto.src.height}                           
+                                    alt={projeto.alt}
+                                />
+                            </picture>                            
+                        </Grid08>                               
+                    }else {                    
+                        return <Grid04 key={index}>                                
+                            <picture>
+                                <source media="(max-width: 999px)" srcSet={projeto.src.src}/>
+                                <Image src={projeto.src} style={{height:'100%'}}
+                                    width={projeto.src.widht} height={projeto.src.height}                           
+                                    alt={projeto.alt}
+                                />
+                            </picture>                                
+                        </Grid04>      
+                    }                
+                })}   
+            </Container>            
         </section>
     </>
 }
