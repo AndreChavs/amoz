@@ -14,9 +14,6 @@ body {
   margin: 0;
   font-family:var(--type-font-text); 
 }
-main{
-  padding-top: 235px;
-}
 img{
   display: block;
   width: 100%;
