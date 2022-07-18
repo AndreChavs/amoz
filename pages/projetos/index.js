@@ -41,7 +41,7 @@ export default function Projetos() {
         </section>
         {/*  */}
         <section className='projetos-grid'>
-            <Container className='wrap' >        
+            <Container className='wrap'>        
                 {projetosApi.map( (projeto, index) => {
                     if(index % 2 == 0){                                       
                         return <Grid08 key={index}>
