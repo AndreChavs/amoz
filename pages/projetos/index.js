@@ -45,7 +45,7 @@ export default function Projetos() {
                 {projetosApi.map( (projeto, index) => {
                     if(index % 2 == 0){                                       
                         return <Grid08 key={index}>
-                            <Link href="/">
+                            <Link href="projeto/projeto1">
                                 <picture>
                                     <source media="(max-width: 999px)" srcSet={projeto.src.src}/>
                                     <Image src={projeto.src} 
