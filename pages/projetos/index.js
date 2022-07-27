@@ -1,5 +1,4 @@
 import Head from "next/head"
-
 import Link from "next/link"
 import Container from '../../src/layout/container/Container'
 import Grid06 from '../../src/layout/container/Grid06'
@@ -7,14 +6,13 @@ import Grid08 from '../../src/layout/container/Grid08'
 import Grid04 from '../../src/layout/container/Grid04'
 
 
-
 export default function Projetos() {
-
+  
     const projetosApi = [
-        {src:'/projetos/projeto1.jpg', alt:'descrição da imagem', href:'/'}, 
-        {src:'/projetos/projeto2.jpg', alt:'descrição da imagem', href:'/'},
-        {src:'/projetos/projeto4.jpg', alt:'descrição da imagem', href:'/'},
-        {src:'/projetos/projeto3.jpg', alt:'descrição da imagem', href:'/'}, 
+        {src:'/projetos/projeto1.jpg', alt:'descrição da imagem', href:'/projeto/ana'}, 
+        {src:'/projetos/projeto2.jpg', alt:'descrição da imagem', href:'/projeto/cecilia'},
+        {src:'/projetos/projeto4.jpg', alt:'descrição da imagem', href:'/projeto/veronica'},
+        {src:'/projetos/projeto3.jpg', alt:'descrição da imagem', href:'/projeto/sandy'}, 
     ]
     
     return <>
