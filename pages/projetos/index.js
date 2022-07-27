@@ -1,29 +1,26 @@
 import Head from "next/head"
-import Image from "next/image"
+
 import Link from "next/link"
 import Container from '../../src/layout/container/Container'
 import Grid06 from '../../src/layout/container/Grid06'
 import Grid08 from '../../src/layout/container/Grid08'
 import Grid04 from '../../src/layout/container/Grid04'
 
-import img1 from '../../public/projetos/projeto1.jpg'
-import img2 from '../../public/projetos/projeto2.jpg'
-import img3 from '../../public/projetos/projeto3.jpg'
-import img4 from '../../public/projetos/projeto4.jpg'
 
 
 export default function Projetos() {
 
     const projetosApi = [
-        {src:img1, alt:'descrição da imagem'}, {src:img2, alt:'descrição da imagem'},
-        {src:img3, alt:'descrição da imagem'}, {src:img4, alt:'descrição da imagem'}
+        {src:'/projetos/projeto1.jpg', alt:'descrição da imagem', href:'/'}, 
+        {src:'/projetos/projeto2.jpg', alt:'descrição da imagem', href:'/'},
+        {src:'/projetos/projeto4.jpg', alt:'descrição da imagem', href:'/'},
+        {src:'/projetos/projeto3.jpg', alt:'descrição da imagem', href:'/'}, 
     ]
-
+    
     return <>
         <Head>      
             <title>Amoz - Projetos arquitetônicos e Interiores</title>
         </Head>
-
         <section className='projetos-hero'>
             <Container className='projetos-header wrap'>
                 <Grid06 style={{marginTop:'0px'}}>
@@ -43,29 +40,29 @@ export default function Projetos() {
         <section className='projetos-grid'>
             <Container className='wrap'>        
                 {projetosApi.map( (projeto, index) => {
-                    if(index % 2 == 0){                                       
-                        return <Grid08 key={index}>
-                            <Link href="projeto/projeto1">
-                                <picture>
-                                    <source media="(max-width: 999px)" srcSet={projeto.src.src}/>
-                                    <Image src={projeto.src} 
-                                        width={projeto.src.widht} height={projeto.src.height}                           
-                                        alt={projeto.alt}
-                                    />
-                                </picture>
-                            </Link>                     
-                        </Grid08>                               
-                    }else {                    
-                        return <Grid04 key={index}>                                
-                            <picture>
-                                <source media="(max-width: 999px)" srcSet={projeto.src.src}/>
-                                <Image src={projeto.src} 
-                                    width={projeto.src.widht} height={projeto.src.height}                           
-                                    alt={projeto.alt}
-                                />
-                            </picture>                                
-                        </Grid04>      
-                    }                
+                    if((index == 0) || (index == 3)){                                       
+                      return <Grid08 key={index}>
+                        <Link href={projeto.href}>
+                          <picture className="pic-projects">
+                              <source media="(max-width: 999px)" srcSet={projeto.src}/>
+                              <img src={projeto.src}         
+                                  alt={projeto.alt}
+                              />
+                          </picture>                                                
+                        </Link>                            
+                      </Grid08>                               
+                    }else{                    
+                      return <Grid04 key={index}>
+                        <Link href={projeto.href}>
+                          <picture className="pic-projects">
+                              <source media="(max-width: 999px)" srcSet={projeto.src}/>
+                              <img src={projeto.src}         
+                                  alt={projeto.alt}
+                              />
+                          </picture>                                
+                        </Link>                                
+                      </Grid04>      
+                    }
                 })}   
             </Container>            
         </section>

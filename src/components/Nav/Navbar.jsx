@@ -55,13 +55,11 @@ const Navbar = ({className, style}) => {
       
     <Navlist mobile={mobile} refer={navlistRef} >      
       {linksMenu.map( item => {
-          return <>
-            <li key={item.nome}>
+          return <li key={item.nome}>
               <Link href={item.href}>
                 <a onClick={handleClick}>{item.nome}</a>
               </Link>
             </li>
-          </>
         })}
     </Navlist>    
   </nav>

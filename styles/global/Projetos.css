@@ -24,3 +24,6 @@
 .projetos-grid img{
     height: 100%;
 }
+.pic-projects{
+    cursor: pointer;
+}

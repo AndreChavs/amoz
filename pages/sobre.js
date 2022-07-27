@@ -1,3 +1,3 @@
 export default function Sobre () {
-    return
+    return <main></main>
 }
