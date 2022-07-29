@@ -1,9 +1,3 @@
-import React from 'react'
-
-const sandy = () => {
-  return (
-    <div>sandy</div>
-  )
+export default function Sandy() {
+  return <main>Sandy</main>
 }
-
-export default sandy

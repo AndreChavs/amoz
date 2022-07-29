@@ -9,10 +9,10 @@ import Grid04 from '../../src/layout/container/Grid04'
 export default function Projetos() {
   
     const projetosApi = [
-        {src:'/projetos/projeto1.jpg', alt:'descrição da imagem', href:'/projeto/ana'}, 
-        {src:'/projetos/projeto2.jpg', alt:'descrição da imagem', href:'/projeto/cecilia'},
-        {src:'/projetos/projeto4.jpg', alt:'descrição da imagem', href:'/projeto/veronica'},
-        {src:'/projetos/projeto3.jpg', alt:'descrição da imagem', href:'/projeto/sandy'}, 
+        {src:'/projetos/projeto1.jpg', alt:'descrição da imagem', href:'/projetos/ana'}, 
+        {src:'/projetos/projeto2.jpg', alt:'descrição da imagem', href:'/projetos/cecilia'},
+        {src:'/projetos/projeto4.jpg', alt:'descrição da imagem', href:'/projetos/veronica'},
+        {src:'/projetos/projeto3.jpg', alt:'descrição da imagem', href:'/projetos/sandy'}, 
     ]
     
     return <>

@@ -1,9 +1,3 @@
-import React from 'react'
-
-const ana = () => {
-  return (
-    <div>ana</div>
-  )
+export default function Ana() {
+  return <main>Ana</main>
 }
-
-export default ana

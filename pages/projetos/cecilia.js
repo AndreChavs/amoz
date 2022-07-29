@@ -1,9 +1,3 @@
-import React from 'react'
-
-const cecilia = () => {
-  return (
-    <div>cecilia</div>
-  )
+export default function Cecilia() {
+  return <main>Cecília</main>
 }
-
-export default cecilia
