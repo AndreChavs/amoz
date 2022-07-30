@@ -6,8 +6,7 @@ import Grid08 from '../../src/layout/container/Grid08'
 import Grid04 from '../../src/layout/container/Grid04'
 
 
-export default function Projetos() {
-  
+export default function Projetos() {  
     const projetosApi = [
         {src:'/projetos/projeto1.jpg', alt:'descrição da imagem', href:'/projetos/ana'}, 
         {src:'/projetos/projeto2.jpg', alt:'descrição da imagem', href:'/projetos/cecilia'},
@@ -39,27 +38,27 @@ export default function Projetos() {
             <Container className='wrap'>        
                 {projetosApi.map( (projeto, index) => {
                     if((index == 0) || (index == 3)){                                       
-                      return <Grid08 key={index}>
-                        <Link href={projeto.href}>
-                          <picture className="pic-projects">
-                              <source media="(max-width: 999px)" srcSet={projeto.src}/>
-                              <img src={projeto.src}         
-                                  alt={projeto.alt}
-                              />
-                          </picture>                                                
-                        </Link>                            
-                      </Grid08>                               
+                        return <Grid08 key={index}>
+                            <Link href={projeto.href}>
+                            <picture className="pic-projects">
+                                <source media="(max-width: 999px)" srcSet={projeto.src}/>
+                                <img src={projeto.src}         
+                                    alt={projeto.alt}
+                                />
+                            </picture>                                                
+                            </Link>                            
+                        </Grid08>                               
                     }else{                    
-                      return <Grid04 key={index}>
-                        <Link href={projeto.href}>
-                          <picture className="pic-projects">
-                              <source media="(max-width: 999px)" srcSet={projeto.src}/>
-                              <img src={projeto.src}         
-                                  alt={projeto.alt}
-                              />
-                          </picture>                                
-                        </Link>                                
-                      </Grid04>      
+                        return <Grid04 key={index}>
+                            <Link href={projeto.href}>
+                            <picture className="pic-projects">
+                                <source media="(max-width: 999px)" srcSet={projeto.src}/>
+                                <img src={projeto.src}         
+                                    alt={projeto.alt}
+                                />
+                            </picture>                                
+                            </Link>                                
+                        </Grid04>      
                     }
                 })}   
             </Container>            
