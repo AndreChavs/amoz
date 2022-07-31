@@ -4,6 +4,7 @@ import '../styles/global/Index.css'
 import '../styles/global/Projetos.css'
 import '../styles/global/Header.css'
 
+
 import Layout from '../src/layout/Layout'
 import Header from '../src/layout/Header/Header'
 
