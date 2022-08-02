@@ -15,12 +15,12 @@ export default function Ana() {
       width={1460} height={1080}
       alt=""/>
     </section>
-    <Container className={styles.descricao}>
+    <Container className={`wrap ${styles.descricao}`}>
       <Grid03 className={styles.detalhes}>
-        <h2>São Paulo <br /> <span>2020</span></h2>
+        <h2>São Paulo  <span>2020</span></h2>
       </Grid03>
       <Grid03 className={styles.detalhes}>
-        <h2>Área <br/><span>120<sup>2</sup></span></h2>
+        <h2>Área <span>120<sup>2</sup></span></h2>
       </Grid03>
       <Grid06 className={styles.text}>
         <p>
@@ -28,18 +28,27 @@ export default function Ana() {
         </p>      
       </Grid06>
     </Container>
-    <Container>
+    <Container className={`wrap ${styles.gridProduct}`}>
       <Grid04>
-        <Image src='/projetos/projeto2.jpg'
-          width={550} height={800}
+        <img src='/projetos/projeto2.jpg'           
           alt='descrição da imagem'
         />        
       </Grid04>
       <Grid08>
-        <Image src='/projetos/projeto1.jpg'
-          width={890} height={800}
+        <img src='/projetos/projeto1.jpg'          
+        alt='projeto cecilia'
         />
       </Grid08>
+      <Grid08>
+        <img src='/projetos/projeto1.jpg'           
+        alt='projeto cecilia'
+        />
+      </Grid08>
+      <Grid04>
+        <img src='/projetos/projeto2.jpg'          
+          alt='descrição da imagem'
+        />        
+      </Grid04>
     </Container>
       
   </>

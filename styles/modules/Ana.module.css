@@ -5,6 +5,7 @@
   margin-top: 2em;
   border-top: 1px solid #616161;
   border-bottom: 1px solid #616161;
+  
 }
 .detalhes{
   margin-top: 0px;
@@ -40,4 +41,8 @@
 }
 .linha{
   border-top: 1px solid;
+}
+
+.gridProduct img{
+  height: 100%;
 }
