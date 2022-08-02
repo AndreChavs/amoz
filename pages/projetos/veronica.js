@@ -3,7 +3,7 @@ import Grid03 from '../../src/layout/container/Grid03'
 import Grid06 from '../../src/layout/container/Grid06'
 import Grid08 from '../../src/layout/container/Grid08'
 import Grid04 from '../../src/layout/container/Grid04'
-import styles from '../../styles/modules/Ana.module.css'
+import styles from '../../styles/modules/Projeto.module.css'
 import Image from 'next/image'
 export default function Veronica() {
   return <>
